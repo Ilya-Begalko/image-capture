@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Image Capture</title>
+   </head>
+   <body>
+    <!-- индикатор загрузки -->
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- приложение -->
+    <div id="app">
+      <div>
+        <!-- контейнер для потока -->
+        <video autoplay muted></video>
+        <!-- результат -->
+        <div class="result">
+          <!-- контейнер для фото -->
+          <img />
+          <!-- ссылка для скачивания фото -->
+          <a class="photo-link">Download</a>
+          <!-- контейнер для фрейма -->
+          <canvas width="0" height="0"></canvas>
+          <!-- ссылка для скачивания фрейма -->
+          <a class="canvas-link">Download</a>
+        </div>
+      </div>
+      <!-- настройки -->
+      <form class="settings">
+        <!-- кнопки для -->
+        <div class="controls">
+          <!-- получения снимка -->
+          <button class="take-photo">Take photo</button>
+          <!-- удаления снимка -->
+          <button class="remove-photo" type="button">Remove photo</button>
+          <!-- получения фрейма -->
+          <button class="grab-frame" type="button">Grab frame</button>
+          <!-- очистки холста -->
+          <button class="clear-canvas" type="button">Clear canvas</button>
+        </div>
+      </form>
+    </div>
+    <!-- скрипты -->
+    <!-- глобальные утилиты и переменные -->
+    <script src="scripts/globals.js"></script>
+    <!-- основной модуль -->
+    <script type="module" src="scripts/main.js"></script>
+   </body>
+</html>
